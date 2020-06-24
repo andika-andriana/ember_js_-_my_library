@@ -1,0 +1,45 @@
+<div class="row mt-3">
+  <div class="col-lg-6">
+    <h3 class="text-info">List Of Books</h3>
+  </div>
+</div>
+<hr class="bg-info">
+{{#if model}}
+  <table class="table table-bordered table-stripped">
+    <thead>
+      <tr class="text-center bg-info text-light">
+        <th>No.</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Date Published</th>
+        <th>Number Of Pages</th>
+        <th>Type Of Book</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |item index|}}
+        <tr>
+          <td>{{inc index}}</td>
+          <td>{{item.title}}</td>
+          <td>{{item.author}}</td>
+          <td>{{moment-format item.datePublished "DD-MMM-YYYY"}}</td>
+          <td>{{item.numberOfPages}}</td>
+          <td>{{item.typeOfBook}}</td>
+          <td>
+            {{#link-to "list-of-book.detail" item.id class="btn btn-sm btn-info"}}Detail{{/link-to}}
+            {{#link-to "list-of-book.edit" item.id class="btn btn-sm btn-warning"}}Edit{{/link-to}}
+            <button {{action "deleteBook" item.id}} class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+{{else}}
+  <h5>Ups, Book Not Found...</h5>
+{{/if}}
+<hr class="bg-info">
+{{#link-to "list-of-book.create" class="btn btn-success"}}
+  Add New Book
+{{/link-to}}
