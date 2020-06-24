@@ -1,45 +1,38 @@
+<hr class="bg-info">
 <div class="row mt-3">
-  <div class="col-lg-6">
-    <h3 class="text-info">Detail Of Book</h3>
+  <div class="col-lg-12">
+    <h3 class="text-info d-flex justify-content-center">Detail of Book</h3>
   </div>
 </div>
-
 <hr class="bg-info">
 
 <div class="row">
   <div class="col-lg-12">
 
-    <div class="form-group-row">
+    <div class="form-group-row d-flex justify-content-center">
       <label class="label-input">Title: {{model.title}}</label>
     </div>
 
-    <div class="form-group-row">
+    <div class="form-group-row d-flex justify-content-center">
       <label class="label-input">Author: {{model.author}}</label>
     </div>
 
-    <div class="form-group-row">
+    <div class="form-group-row d-flex justify-content-center">
       <label class="label-input">Date Published: {{moment-format model.datePublished "DD-MMM-YYYY"}}</label>
     </div>
 
-    <div class="form-group-row">
-      <label class="label-input">Number Of Pages: {{model.numberOfPages}}</label>
+    <div class="form-group-row d-flex justify-content-center">
+      <label class="label-input">Number of Pages: {{model.numberOfPages}}</label>
     </div>
 
-    <div class="form-group-row">
-      <label class="label-input">Type Of Book: {{model.typeOfBook}}</label>
-    </div>
-
-    <div class="form-group-row">
-      <label class="label-input">Cover: </label>
-      <div class="col-sm-10">
-        <img src={{model.cover}} alt="cover">
-      </div>
+    <div class="form-group-row d-flex justify-content-center">
+      <label class="label-input">Type of Book: {{model.typeOfBook}}</label>
     </div>
 
   </div>
 </div>
 
 <hr class="bg-info">
-{{#link-to "list-of-book.index" class="btn btn-success"}}
+{{#link-to "list-of-book.index" class="btn btn-success d-flex justify-content-center"}}
   Back to list
 {{/link-to}}

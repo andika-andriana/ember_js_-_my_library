@@ -31,8 +31,5 @@ export default Factory.extend({
   },
   typeOfBook(){
     return faker.random.arrayElement(["One Of Novel","Documentation","Other"]);
-  },
-  cover(){
-    return `${faker.image.imageUrl(300,300,"technics")}?random=${Date.now()}`;
   }
 });

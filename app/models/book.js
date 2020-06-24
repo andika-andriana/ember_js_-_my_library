@@ -6,6 +6,5 @@ export default Model.extend({
   author: DS.attr('string'),
   datePublished: DS.attr('date'),
   numberOfPages: DS.attr('number'),
-  typeOfBook: DS.attr('string'),
-  cover: DS.attr('string')
+  typeOfBook: DS.attr('string')
 });
