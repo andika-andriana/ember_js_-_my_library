@@ -1,4 +1,4 @@
-![public/assets/ember.svg](public/assets/ember.svg)
+![public/assets/ember.png](public/assets/ember.png=128x)
 
 # My Library
 
