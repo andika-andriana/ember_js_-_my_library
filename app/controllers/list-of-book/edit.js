@@ -8,10 +8,15 @@ export default Controller.extend({
     let types = ["One Of Novel","Documentation","Other"];
     this.set('typeBooks', types);
   },
-
   actions:{
-    onChangeCombo(item){
-      console.log(item);
-    },
+    saveBook(){
+      this.model.save().then((response) =>{
+        alert("Book Updated!");
+        this.transitionToRoute('list-of-book.detail', response.id);
+      }).catch((error)=>{
+        alert("Update Book Failed!");
+        console.log(error)
+      });
+    }
   }
 });
