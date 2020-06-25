@@ -1,4 +1,5 @@
-![public/assets/ember.png](public/assets/ember.png)
+![public/assets/ember.svg](public/assets/ember.svg)
+
 # My Library
 
 > Library is Web based App, has been build using Ember.js and Bootstrap component with Ember-Mirage as fake back-end API.
