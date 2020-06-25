@@ -1,7 +1,14 @@
-# my-library
+# My Library
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+> Library is Web based App, has been build using Ember.js and Bootstrap component with Ember-Mirage as fake back-end API.
+
+![public/assets/ember.png](public/assets/ember.png)
+
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger)
+
+## Screenshot
+
+![public/assets/screenshot.png](public/assets/screenshot.png)
 
 ## Prerequisites
 

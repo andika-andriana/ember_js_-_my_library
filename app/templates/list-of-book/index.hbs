@@ -1,0 +1,44 @@
+<hr class="bg-info">
+<div class="row mt-3">
+  <div class="col-lg-12">
+    <h3 class="text-info d-flex justify-content-center">List of Books</h3>
+  </div>
+</div>
+<hr class="bg-info">
+{{#if model}}
+  <table class="table table-bordered table-stripped">
+    <thead>
+      <tr class="text-center bg-info text-light">
+        <th class="text-center">No.</th>
+        <th class="text-center">Title</th>
+        <th class="text-center">Author</th>
+        <th class="text-center">Type of Book</th>
+        <th class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |item index|}}
+        <tr>
+          <td class="text-center">{{inc index}}</td>
+          <td class="text-center">{{item.title}}</td>
+          <td class="text-center">{{item.author}}</td>
+          <td class="text-center">{{item.typeOfBook}}</td>
+          <td class="text-center">
+            {{#link-to "list-of-book.detail" item.id class="btn btn-sm btn-info"}}Detail{{/link-to}}
+            {{#link-to "list-of-book.edit" item.id class="btn btn-sm btn-warning"}}Edit{{/link-to}}
+            <button {{action "deleteBook" item.id}} class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+{{else}}
+  <h5>Ups, Book Not Found...</h5>
+{{/if}}
+
+<hr class="bg-info">
+
+{{#link-to "list-of-book.create" class="btn btn-success d-flex justify-content-center"}}
+  Add more
+{{/link-to}}

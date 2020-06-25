@@ -1,0 +1,47 @@
+<hr class="bg-info">
+<div class="row mt-3">
+  <div class="col-lg-12">
+    <h3 class="text-info d-flex justify-content-center">Detail of Book</h3>
+  </div>
+</div>
+<hr class="bg-info">
+
+<table class="table table-bordered table-stripped">
+  <thead>
+    <tr class="text-center bg-info text-light">
+      <th class="text-center">Book</th>
+      <th class="text-center">Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-center">Title</th>
+      <td class="text-center">{{model.title}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Author</th>
+      <td class="text-center">{{model.author}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Date Published</th>
+      <td class="text-center">{{moment-format model.datePublished "DD-MMM-YYYY"}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Number of Pages</th>
+      <td class="text-center">{{model.numberOfPages}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Title</th>
+      <td class="text-center">{{model.title}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Type of Book</th>
+      <td class="text-center">{{model.typeOfBook}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="bg-info">
+{{#link-to "list-of-book.index" class="btn btn-info d-flex justify-content-center"}}
+  Back to list
+{{/link-to}}
