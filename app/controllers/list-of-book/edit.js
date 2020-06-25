@@ -17,6 +17,10 @@ export default Controller.extend({
         alert("Update Book Failed!");
         console.log(error)
       });
+    },
+    cancelBook(){
+      this.model.rollbackAttributes();
+      this.transitionToRoute('list-of-book.index');
     }
   }
 });

@@ -6,64 +6,10 @@
 </div>
 <hr class="bg-info">
 
-<div class="row">
-  <div class="col-lg-12">
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Title</label>
-      <div class="col-sm-10">
-        <Input class="form-control" @value={{model.title}}/>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Author</label>
-      <div class="col-sm-10">
-        <Input class="form-control" @value={{model.author}}/>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Date Published</label>
-      <div class="col-sm-10">
-        <PowerDatepicker @selected={{model.datePublished}} @onSelect={{action (mut model.datePublished) value="date"}} as |dp|>
-          <dp.Trigger tabindex="-1">
-            <input type="text" class="form-control" value={{moment-format model.datePublished "DD-MMM-YYYY"}}>
-          </dp.Trigger>
-
-          <dp.Content class="demo-calendar-small">
-            <dp.Nav/>
-            <dp.Days/>
-          </dp.Content>
-        </PowerDatepicker>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Number of Pages</label>
-      <div class="col-sm-10">
-        <Input class="form-control" @type="number" @value={{model.numberOfPages}}/>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Type of Book</label>
-      <div class="col-sm-10">
-        <PowerSelect
-          @selected={{model.typeOfBook}}
-          @options={{this.typeBooks}}
-          @onChange={{action (mut model.typeOfBook)}} as |item|>
-          {{item}}
-        </PowerSelect>
-      </div>
-    </div>
-  </div>
-</div>
+<Book @model={{model}}/>
 
 <hr class="bg-info">
 
-<button class="btn btn-success btn-block" {{action "saveBook"}}>Simpan Transaksi</button>
+<button class="btn btn-success btn-block" {{action "saveBook"}}>{{if model.id "Save Changes" "Save"}}</button>
 <br>
-{{#link-to "list-of-book.index" class="btn btn-info d-flex justify-content-center"}}
-  Back to list
-{{/link-to}}
+<button class="btn btn-info btn-block" {{action "cancelBook"}}>Back to list</button>

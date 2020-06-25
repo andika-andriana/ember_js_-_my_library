@@ -6,31 +6,40 @@
 </div>
 <hr class="bg-info">
 
-<div class="row">
-  <div class="col-lg-12">
-
-    <div class="form-group-row d-flex justify-content-center">
-      <label class="label-input">Title: {{model.title}}</label>
-    </div>
-
-    <div class="form-group-row d-flex justify-content-center">
-      <label class="label-input">Author: {{model.author}}</label>
-    </div>
-
-    <div class="form-group-row d-flex justify-content-center">
-      <label class="label-input">Date Published: {{moment-format model.datePublished "DD-MMM-YYYY"}}</label>
-    </div>
-
-    <div class="form-group-row d-flex justify-content-center">
-      <label class="label-input">Number of Pages: {{model.numberOfPages}}</label>
-    </div>
-
-    <div class="form-group-row d-flex justify-content-center">
-      <label class="label-input">Type of Book: {{model.typeOfBook}}</label>
-    </div>
-
-  </div>
-</div>
+<table class="table table-bordered table-stripped">
+  <thead>
+    <tr class="text-center bg-info text-light">
+      <th class="text-center">Book</th>
+      <th class="text-center">Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-center">Title</th>
+      <td class="text-center">{{model.title}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Author</th>
+      <td class="text-center">{{model.author}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Date Published</th>
+      <td class="text-center">{{moment-format model.datePublished "DD-MMM-YYYY"}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Number of Pages</th>
+      <td class="text-center">{{model.numberOfPages}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Title</th>
+      <td class="text-center">{{model.title}}</td>
+    </tr>
+    <tr>
+      <th class="text-center">Type of Book</th>
+      <td class="text-center">{{model.typeOfBook}}</td>
+    </tr>
+  </tbody>
+</table>
 
 <hr class="bg-info">
 {{#link-to "list-of-book.index" class="btn btn-info d-flex justify-content-center"}}

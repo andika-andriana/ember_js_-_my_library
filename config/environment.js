@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   let ENV = {
+    moment: {
+      allowEmpty: true // default: false
+    },
     modulePrefix: 'my-library',
     environment,
     rootURL: '/',
