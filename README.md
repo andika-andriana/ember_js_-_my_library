@@ -1,6 +1,6 @@
 # My Library
 
-> Library is Web based App, has been build using Ember.js and Bootstrap component with Ember-Mirage as fake back-end API.
+> My Library is Web based App, has been build using Ember.js and Bootstrap component with Ember-Mirage as fake back-end API.
 
 ![public/assets/ember.png](public/assets/ember.png)
 
